@@ -27,7 +27,10 @@ class Main{
         carro1.fichaTecnica();
         carro1.calculeIdade();
 
+        Aluno Duda = new Aluno();
+        Duda.nome = "Duda";
+        Duda.idade = 20;
 
-
+        Duda.exibeStatus();
     }
 }
