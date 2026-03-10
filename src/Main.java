@@ -28,9 +28,38 @@ class Main{
         carro1.calculeIdade();
 
         Aluno Duda = new Aluno();
-        Duda.nome = "Duda";
+        Duda.setNome("Duda");
         Duda.idade = 20;
+        Duda.setNotas(8);
+        Duda.setNotas(9);
+        Duda.setNotas(10);
+        Duda.getCalcularMedia();
 
-        Duda.exibeStatus();
+        Duda.getExibeStatus();
+
+        ContaBancaria CONTA1 = new ContaBancaria();
+
+        CONTA1.setTitular("Samuel");
+        CONTA1.setNumeroConta(00001);
+        CONTA1.setDepositarSaldo(1600);
+        CONTA1.getExibirStatus();
+
+        IdadePessoa pessoa1 = new IdadePessoa();
+
+        pessoa1.setNome("Ricardo");
+        pessoa1.setIdade(50);
+        pessoa1.getVerificaIdade();
+
+        Produto xbox = new Produto();
+
+        xbox.setNome("Xbox 360");
+        xbox.setPreco(1500);
+        xbox.aplicarDesconto(0.1);
+
+        Livro l1 = new Livro();
+        l1.setAutor("Machado de Assis");
+        l1.setTitulo("Senhora");
+        l1.exibirDetalhes();
+
     }
 }
