@@ -1,25 +1,33 @@
 public class ContaBancaria {
-    public String titular;
-    private int numeroConta;
-    private double saldo;
+    private String titular;
+    protected double saldo;
 
-    public void setDepositarSaldo(double valor){
-        saldo += valor;
+    public String getTitular() {
+        return titular;
     }
 
-    public void setTitular(String nome){
-        titular = nome;
+    public void setTitular(String titular) {
+        this.titular = titular;
     }
 
-    public void setNumeroConta(int numero){
-        numeroConta = numero;
+    public void depositar(double valor){
+
+        if(valor <= 0) {
+            System.out.println("Valor invalido!");
+        } else {
+            this.saldo += valor;
+        }
     }
 
-    public void getExibirStatus(){
-        System.out.println(String.format("""
-                Titular = %s
-                Numero da Conta = %d
-                Saldo = R$ %.2f
-                """, titular, numeroConta, saldo));
+    public void sacar(double valor){
+        if(valor <= 0 || valor > saldo){
+            System.out.println("Acao invalida");
+        } else {
+            this.saldo -= valor;
+        }
+    }
+
+    public double consultarSaldo(){
+        return saldo;
     }
 }
